@@ -11,4 +11,6 @@
 @interface ImageViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,weak) IBOutlet UITableView *imageTableView;
 @property(nonatomic,weak)  UITableView *backgroundPicture;
+
+- (IBAction)testclick:(id)sender;
 @end

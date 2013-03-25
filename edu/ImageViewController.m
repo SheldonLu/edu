@@ -36,7 +36,7 @@
 //    [self.view insertSubview:self.backgroundPicture atIndex:0];//全人类都知道这句话什么意思
     
     
-    imageArray = [[NSArray alloc] initWithObjects:@"modo.jpg",@"tc.png",@"tcbj.png", nil];
+    imageArray = [[NSArray alloc] initWithObjects:@"modo.jpg",@"tc.png",@"tcbj.png",@"new.png",nil];
     titleArray = [[NSArray alloc] initWithObjects:@"个人相册",@"班级相册", nil];
 }
 
@@ -54,19 +54,24 @@
     if (cell ==nil){
         cell = [[ImageTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
+
+    cell.imageView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row*2]];
+    if (imageArray.count>indexPath.row*2+1) {
+        cell.imageOtherView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row*2+1]];
+        cell.clipsToBounds = NO;
+    }
     
-    cell.imageView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]];
-    cell.imageOtherView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]];
+//    [cell addTarget:self action:@selector(testclick:) forControlEvents:ImageViewController];
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    NSInteger num=[imageArray count]/2;
-//    if ([imageArray count]%2 !=0 ){
-//        num = num+1;
-//    }
-    return [imageArray count];
+    NSInteger num=[imageArray count]/2;
+    if ([imageArray count]%2 !=0 ){
+        num = num+1;
+    }
+    return num;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -98,5 +103,9 @@
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return nil;
+}
+- (IBAction)testclick:(id)sender
+{
+  NSInteger inter=1;
 }
 @end

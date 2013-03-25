@@ -11,4 +11,6 @@
 @interface ImageTableCell : UITableViewCell
 @property(nonatomic,weak) IBOutlet UIImageView *imageView;
 @property(nonatomic,weak) IBOutlet UIImageView *imageOtherView;
+
+- (IBAction)myclick:(id)sender;
 @end

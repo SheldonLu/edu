@@ -32,6 +32,7 @@
 		559B267716FFDCDF00088866 /* tcbj.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B267416FFDCDF00088866 /* tcbj.png */; };
 		559B267A16FFE56900088866 /* ImageTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B267916FFE56900088866 /* ImageTableCell.m */; };
 		559B267C16FFF50300088866 /* ic_wh_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B267B16FFF50300088866 /* ic_wh_message.png */; };
+		55BE07D417001B3000DB9C1F /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BE07D317001B3000DB9C1F /* new.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		559B267816FFE56900088866 /* ImageTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableCell.h; sourceTree = "<group>"; };
 		559B267916FFE56900088866 /* ImageTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableCell.m; sourceTree = "<group>"; };
 		559B267B16FFF50300088866 /* ic_wh_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wh_message.png; sourceTree = "<group>"; };
+		55BE07D317001B3000DB9C1F /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		559B265716FF018000088866 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				55BE07D317001B3000DB9C1F /* new.png */,
 				559B267B16FFF50300088866 /* ic_wh_message.png */,
 				559B267216FFDCDF00088866 /* modo.jpg */,
 				559B267316FFDCDF00088866 /* tc.png */,
@@ -231,6 +234,7 @@
 				559B267616FFDCDF00088866 /* tc.png in Resources */,
 				559B267716FFDCDF00088866 /* tcbj.png in Resources */,
 				559B267C16FFF50300088866 /* ic_wh_message.png in Resources */,
+				55BE07D417001B3000DB9C1F /* new.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +375,7 @@
 				559B265616FEFE7E00088866 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
