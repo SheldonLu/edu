@@ -40,6 +40,7 @@
 		55A16DE117006EB400904DE6 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A16DD917006EB400904DE6 /* UIButton+WebCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55A16DE217006EB400904DE6 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A16DDB17006EB400904DE6 /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55A16DE517006F0400904DE6 /* PinterestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A16DE417006F0300904DE6 /* PinterestCell.m */; };
+		55A16DE8170087F200904DE6 /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A16DE7170087F200904DE6 /* ImageDetailViewController.m */; };
 		55BE07D417001B3000DB9C1F /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BE07D317001B3000DB9C1F /* new.png */; };
 		55BE07D71700318800DB9C1F /* AlbumImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE07D61700318800DB9C1F /* AlbumImageViewController.m */; };
 		55BE07EA1700435500DB9C1F /* PSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE07E81700435500DB9C1F /* PSCollectionView.m */; };
@@ -100,6 +101,8 @@
 		55A16DDB17006EB400904DE6 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		55A16DE317006F0300904DE6 /* PinterestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinterestCell.h; sourceTree = "<group>"; };
 		55A16DE417006F0300904DE6 /* PinterestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinterestCell.m; sourceTree = "<group>"; };
+		55A16DE6170087F100904DE6 /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
+		55A16DE7170087F200904DE6 /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
 		55BE07D317001B3000DB9C1F /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 		55BE07D51700318800DB9C1F /* AlbumImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumImageViewController.h; sourceTree = "<group>"; };
 		55BE07D61700318800DB9C1F /* AlbumImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumImageViewController.m; sourceTree = "<group>"; };
@@ -172,6 +175,8 @@
 				55BE07D61700318800DB9C1F /* AlbumImageViewController.m */,
 				55A16DE317006F0300904DE6 /* PinterestCell.h */,
 				55A16DE417006F0300904DE6 /* PinterestCell.m */,
+				55A16DE6170087F100904DE6 /* ImageDetailViewController.h */,
+				55A16DE7170087F200904DE6 /* ImageDetailViewController.m */,
 			);
 			path = edu;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				55A16DE117006EB400904DE6 /* UIButton+WebCache.m in Sources */,
 				55A16DE217006EB400904DE6 /* UIImageView+WebCache.m in Sources */,
 				55A16DE517006F0400904DE6 /* PinterestCell.m in Sources */,
+				55A16DE8170087F200904DE6 /* ImageDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

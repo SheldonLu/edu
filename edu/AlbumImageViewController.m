@@ -8,6 +8,7 @@
 
 #import "AlbumImageViewController.h"
 #import "PinterestCell.h"
+#import "ImageDetailViewController.h"
 @interface AlbumImageViewController ()
 
 @end
@@ -92,6 +93,18 @@
 
 - (void)collectionView:(PSCollectionView *)collectionView didSelectView:(PSCollectionViewCell *)view atIndex:(NSInteger)index {
     NSLog(@"didSelectView: %d", index);
+    NSDictionary *item = [self.items objectAtIndex:index];
+    
+    [self performSegueWithIdentifier:@"showImageDetail" sender:item];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue*) segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"showImageDetail"]){
+        ImageDetailViewController *detailsVC = [segue destinationViewController];
+        detailsVC.itemDirtionary = sender;
+        detailsVC.hidesBottomBarWhenPushed = YES;
+    }
 }
 ///////////////////////// 第三方响应  ///////////////////////////
 - (void)didReceiveMemoryWarning
