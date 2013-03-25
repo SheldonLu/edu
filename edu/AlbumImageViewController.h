@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "PSCollectionView.h"
 
-@interface AlbumImageViewController : UIViewController<PSCollectionViewDelegate, PSCollectionViewDataSource>
+@interface AlbumImageViewController : UIViewController<PSCollectionViewDelegate, PSCollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, retain) NSMutableArray *items;
 @property (nonatomic, retain) PSCollectionView *collectionView;
+
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *uploaderButton;
+
+- (IBAction)getCameraPicture:(id)sender;
+- (IBAction)getExistintPicture:(id)sender;
 @end
