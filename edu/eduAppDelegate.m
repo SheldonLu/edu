@@ -6,13 +6,15 @@
 //  Copyright (c) 2013年 lubing. All rights reserved.
 //
 
-#import "eduAppDelegate.h"
-
-@implementation eduAppDelegate
+#import "EduAppDelegate.h"
+#import "EduViewController.h"
+@implementation EduAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+//    eduViewController *vc2=[[eduViewController alloc] init];
+//    [self. presentModalViewController:vc2 animated:NO];
     return YES;
 }
 							

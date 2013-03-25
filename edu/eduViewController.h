@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface eduViewController : UIViewController
-
+@interface EduViewController : UIViewController
+@property(nonatomic,weak) IBOutlet UIView *loginView;
+- (IBAction)click:(id)sender;
 @end

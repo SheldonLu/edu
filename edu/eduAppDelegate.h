@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface eduAppDelegate : UIResponder <UIApplicationDelegate>
+#import "MainViewController.h"
+@interface EduAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) MainViewController *mainViewController;
 @end

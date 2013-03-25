@@ -13,6 +13,6 @@
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([eduAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([EduAppDelegate class]));
     }
 }
