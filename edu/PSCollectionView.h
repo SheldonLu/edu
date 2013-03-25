@@ -22,9 +22,6 @@
 // THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
-#import "PSCollectionViewCell.h"
-
-#define kPSCollectionViewDidRelayoutNotification @"kPSCollectionViewDidRelayoutNotification"
 
 @class PSCollectionViewCell;
 
@@ -36,6 +33,8 @@
 
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) UIView *footerView;
+@property (nonatomic, strong) UIView *emptyView;
+@property (nonatomic, strong) UIView *loadingView;
 
 @property (nonatomic, assign, readonly) CGFloat colWidth;
 @property (nonatomic, assign, readonly) NSInteger numCols;
@@ -56,7 +55,7 @@
  Dequeues a reusable view that was previously initialized
  This is similar to UITableView dequeueReusableCellWithIdentifier
  */
-- (PSCollectionViewCell *)dequeueReusableViewForClass:(Class)viewClass;
+- (UIView *)dequeueReusableView;
 
 @end
 
@@ -65,8 +64,7 @@
 @protocol PSCollectionViewDelegate <NSObject>
 
 @optional
-- (void)collectionView:(PSCollectionView *)collectionView didSelectCell:(PSCollectionViewCell *)cell atIndex:(NSInteger)index;
-- (Class)collectionView:(PSCollectionView *)collectionView cellClassForRowAtIndex:(NSInteger)index;
+- (void)collectionView:(PSCollectionView *)collectionView didSelectView:(PSCollectionViewCell *)view atIndex:(NSInteger)index;
 
 @end
 
@@ -75,8 +73,8 @@
 @protocol PSCollectionViewDataSource <NSObject>
 
 @required
-- (NSInteger)numberOfRowsInCollectionView:(PSCollectionView *)collectionView;
-- (PSCollectionViewCell *)collectionView:(PSCollectionView *)collectionView cellForRowAtIndex:(NSInteger)index;
-- (CGFloat)collectionView:(PSCollectionView *)collectionView heightForRowAtIndex:(NSInteger)index;
+- (NSInteger)numberOfViewsInCollectionView:(PSCollectionView *)collectionView;
+- (PSCollectionViewCell *)collectionView:(PSCollectionView *)collectionView viewAtIndex:(NSInteger)index;
+- (CGFloat)heightForViewAtIndex:(NSInteger)index;
 
 @end

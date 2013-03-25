@@ -29,6 +29,9 @@
 
 @implementation PSCollectionViewCell
 
+@synthesize
+object = _object;
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -40,13 +43,11 @@
 - (void)prepareForReuse {
 }
 
-- (void)collectionView:(PSCollectionView *)collectionView fillCellWithObject:(id)object atIndex:(NSInteger)index {
-    self.collectionView = collectionView;
+- (void)fillViewWithObject:(id)object {
     self.object = object;
-    self.index = index;
 }
 
-+ (CGFloat)rowHeightForObject:(id)object inColumnWidth:(CGFloat)columnWidth {
++ (CGFloat)heightForViewWithObject:(id)object inColumnWidth:(CGFloat)columnWidth {
     return 0.0;
 }
 
