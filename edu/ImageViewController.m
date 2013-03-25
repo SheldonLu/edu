@@ -8,6 +8,8 @@
 
 #import "ImageViewController.h"
 #import "ImageTableCell.h"
+#import "AlbumImageViewController.h"
+#import "EduAppDelegate.h"
 @interface ImageViewController ()
 
 @end
@@ -59,9 +61,21 @@
     if (imageArray.count>indexPath.row*2+1) {
         cell.imageOtherView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row*2+1]];
         cell.clipsToBounds = NO;
+        
+
+        cell.imageOtherView.userInteractionEnabled = YES;
+        UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testclick:)];
+        [cell.imageOtherView addGestureRecognizer:singleTap];
     }
     
-//    [cell addTarget:self action:@selector(testclick:) forControlEvents:ImageViewController];
+   int choose_l_or_r=[[NSNumber numberWithInteger:cell.imageView.tag ] intValue];
+
+    cell.imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testclick:)];
+    [cell.imageView addGestureRecognizer:singleTap];
+    
+ 
+    
     return cell;
 }
 
@@ -106,6 +120,17 @@
 }
 - (IBAction)testclick:(id)sender
 {
-  NSInteger inter=1;
+//    动态获取IMageView的数据，每个响应的数据不一样
+//  EduAppDelegate *appDelegate = (EduAppDelegate *) [[UIApplication sharedApplication] delegate];
+//
+////  [[self navigationController] pushViewController:targetController animated:YES];
+  [self performSegueWithIdentifier:@"showAlbumImage" sender:self];
+  
+}
+-(void)prepareForSegue:(UIStoryboardSegue*) segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"showAlbumImage"]){
+         AlbumImageViewController *detailsVC = [segue destinationViewController];
+    }
 }
 @end

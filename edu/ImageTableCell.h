@@ -11,6 +11,11 @@
 @interface ImageTableCell : UITableViewCell
 @property(nonatomic,weak) IBOutlet UIImageView *imageView;
 @property(nonatomic,weak) IBOutlet UIImageView *imageOtherView;
-
+@property(nonatomic,weak) IBOutlet UILabel *titleLabel;
+@property(nonatomic,weak) IBOutlet UILabel *numLabel;
+@property(nonatomic,weak) IBOutlet UILabel *titleotherLabel;
+@property(nonatomic,weak) IBOutlet UILabel *numotherLabel;
+@property(nonatomic,weak) IBOutlet UIImageView *commentImageView;
+@property(nonatomic,weak) IBOutlet UIImageView *commentOtherImageView;
 - (IBAction)myclick:(id)sender;
 @end

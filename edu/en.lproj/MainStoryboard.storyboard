@@ -252,8 +252,14 @@
                                     <constraint firstItem="fMa-Ov-W9a" firstAttribute="trailing" secondItem="U9y-bC-7MN" secondAttribute="trailing" type="default" id="wWh-dF-aIe"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="commentImageView" destination="7ff-w6-5cX" id="l9F-fs-N4x"/>
+                                    <outlet property="commentOtherImageView" destination="QQN-gH-VyV" id="ezu-E0-mgC"/>
                                     <outlet property="imageOtherView" destination="9x8-zD-GHe" id="GJd-K2-w8U"/>
                                     <outlet property="imageView" destination="U9y-bC-7MN" id="GcM-bd-ea6"/>
+                                    <outlet property="numLabel" destination="fMa-Ov-W9a" id="C4K-N9-umQ"/>
+                                    <outlet property="numotherLabel" destination="62I-BF-6ZR" id="OIg-CI-7Gi"/>
+                                    <outlet property="titleLabel" destination="EuS-DY-521" id="EBo-8L-PX9"/>
+                                    <outlet property="titleotherLabel" destination="tOk-bw-tdX" id="e6e-To-MZY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -266,16 +272,33 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="imageTableView" destination="F5H-cS-XG7" id="Cpz-QI-fTz"/>
+                        <segue destination="w4X-Sr-Wep" kind="push" identifier="showAlbumImage" id="Req-VA-TOS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XzQ-1n-JAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1750" y="-9"/>
         </scene>
+        <!--Album Image View Controller - 家园通-->
+        <scene sceneID="YS2-xa-cud">
+            <objects>
+                <viewController storyboardIdentifier="" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w4X-Sr-Wep" customClass="AlbumImageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="" id="ag9-Q3-ffz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="342"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="家园通" id="hse-Up-XMN">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="DUb-oO-gxX"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NyN-gZ-s5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2255" y="16"/>
+        </scene>
         <!--Table View Controller - Root View Controller-->
         <scene sceneID="Bpz-oX-Qnc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1gt-wf-n77" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="d9O-Dh-CbJ" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7LZ-OT-SRm">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
@@ -295,6 +318,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="E0R-wQ-GlR"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gt-wf-n77" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1579" y="-717"/>
         </scene>
@@ -382,36 +406,6 @@
         <image name="ic_wh_message.png" width="24" height="24"/>
         <image name="jz_13.png" width="295" height="40"/>
     </resources>
-    <classes>
-        <class className="EduViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/EduViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="click:"/>
-                <relationship kind="outlet" name="loginView" candidateClass="UIView"/>
-            </relationships>
-        </class>
-        <class className="ImageTableCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageTableCell.h"/>
-            <relationships>
-                <relationship kind="action" name="myclick:"/>
-                <relationship kind="outlet" name="imageOtherView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-            </relationships>
-        </class>
-        <class className="ImageViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="testclick:"/>
-                <relationship kind="outlet" name="imageTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="MainViewController" superclassName="UITabBarController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

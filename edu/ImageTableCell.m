@@ -11,6 +11,7 @@
 @implementation ImageTableCell
 @synthesize imageView;
 @synthesize imageOtherView;
+@synthesize numLabel;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
