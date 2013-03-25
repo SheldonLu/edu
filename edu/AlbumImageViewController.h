@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PSCollectionView.h"
 
-@interface AlbumImageViewController : UIViewController<PSCollectionViewDelegate, PSCollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface AlbumImageViewController : UIViewController<PSCollectionViewDelegate, PSCollectionViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UIActionSheetDelegate>
 @property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, strong) PSCollectionView *collectionView;
 
@@ -17,4 +17,5 @@
 
 - (IBAction)getCameraPicture:(id)sender;
 - (IBAction)getExistintPicture:(id)sender;
+- (IBAction)showSheet:(id)sender;
 @end

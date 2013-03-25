@@ -93,7 +93,7 @@
 - (void)collectionView:(PSCollectionView *)collectionView didSelectView:(PSCollectionViewCell *)view atIndex:(NSInteger)index {
     NSLog(@"didSelectView: %d", index);
 }
-
+///////////////////////// 第三方响应  ///////////////////////////
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -124,6 +124,10 @@
     }
 }
 
++(void) doPic
+{
+
+}
 // 打开摄像头
 - (IBAction)getCameraPicture:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:
@@ -198,5 +202,66 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [picker dismissModalViewControllerAnimated:YES];
+}
+
+///////////////////////// UIActionSheetDelegate ///////////////////////////
+- (IBAction)showSheet:(id)sender
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                  initWithTitle:nil
+                                  delegate:self
+                                  cancelButtonTitle:@"取消"
+                                  destructiveButtonTitle:nil
+                                  otherButtonTitles:@"拍照", @"手机相册",nil];
+    actionSheet.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    [actionSheet showInView:[UIApplication sharedApplication].keyWindow];
+//    [actionSheet showInView:self.view];
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+
+        if ([UIImagePickerController isSourceTypeAvailable:
+             UIImagePickerControllerSourceTypeCamera]) {
+            UIImagePickerController *picker =
+            [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.allowsEditing = YES;
+            // 摄像头
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            
+            [self presentModalViewController:picker animated:YES];
+        }else {
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"错误"
+                                  message:@"你没有摄像头"
+                                  delegate:nil
+                                  cancelButtonTitle:@"取消"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }else if (buttonIndex == 1) {
+        if ([UIImagePickerController isSourceTypeAvailable:
+             UIImagePickerControllerSourceTypePhotoLibrary]) {
+            UIImagePickerController *picker =
+            [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.allowsEditing = YES;
+            // 图片库
+            picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            
+            [self presentModalViewController:picker animated:YES];
+            
+        }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:@"Error accessing photo library"
+                                  message:@"Device does not support a photo library"
+                                  delegate:nil
+                                  cancelButtonTitle:@"Drat!"
+                                  otherButtonTitles:nil];
+            [alert show];
+        }
+    }
 }
 @end

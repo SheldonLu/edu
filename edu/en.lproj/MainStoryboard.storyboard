@@ -292,7 +292,7 @@
                         <barButtonItem key="backBarButtonItem" title="返回" id="DUb-oO-gxX"/>
                         <barButtonItem key="rightBarButtonItem" title="上传" id="6BK-Pm-EwE">
                             <connections>
-                                <action selector="getExistintPicture:" destination="w4X-Sr-Wep" id="s2N-Ab-MW3"/>
+                                <action selector="showSheet:" destination="w4X-Sr-Wep" id="Zrd-2L-JBP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -414,6 +414,51 @@
         <image name="ic_wh_message.png" width="24" height="24"/>
         <image name="jz_13.png" width="295" height="40"/>
     </resources>
+    <classes>
+        <class className="AlbumImageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlbumImageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="getCameraPicture:"/>
+                <relationship kind="action" name="getExistintPicture:"/>
+                <relationship kind="action" name="showSheet:"/>
+                <relationship kind="outlet" name="uploaderButton" candidateClass="UIBarButtonItem"/>
+            </relationships>
+        </class>
+        <class className="EduViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EduViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="click:"/>
+                <relationship kind="outlet" name="loginView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="ImageTableCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageTableCell.h"/>
+            <relationships>
+                <relationship kind="action" name="myclick:"/>
+                <relationship kind="outlet" name="commentImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="commentOtherImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imageOtherView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="numLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="numotherLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="titleotherLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="ImageViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ImageViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="testclick:"/>
+                <relationship kind="outlet" name="imageTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="UITabBarController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
