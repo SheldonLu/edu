@@ -30,6 +30,8 @@
 		559B267516FFDCDF00088866 /* modo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 559B267216FFDCDF00088866 /* modo.jpg */; };
 		559B267616FFDCDF00088866 /* tc.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B267316FFDCDF00088866 /* tc.png */; };
 		559B267716FFDCDF00088866 /* tcbj.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B267416FFDCDF00088866 /* tcbj.png */; };
+		559B267A16FFE56900088866 /* ImageTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 559B267916FFE56900088866 /* ImageTableCell.m */; };
+		559B267C16FFF50300088866 /* ic_wh_message.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B267B16FFF50300088866 /* ic_wh_message.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,9 @@
 		559B267216FFDCDF00088866 /* modo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = modo.jpg; sourceTree = "<group>"; };
 		559B267316FFDCDF00088866 /* tc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tc.png; sourceTree = "<group>"; };
 		559B267416FFDCDF00088866 /* tcbj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tcbj.png; sourceTree = "<group>"; };
+		559B267816FFE56900088866 /* ImageTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableCell.h; sourceTree = "<group>"; };
+		559B267916FFE56900088866 /* ImageTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableCell.m; sourceTree = "<group>"; };
+		559B267B16FFF50300088866 /* ic_wh_message.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_wh_message.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,8 @@
 				559B266D16FF12C800088866 /* MainViewController.m */,
 				559B266F16FF459000088866 /* ImageViewController.h */,
 				559B267016FF459000088866 /* ImageViewController.m */,
+				559B267816FFE56900088866 /* ImageTableCell.h */,
+				559B267916FFE56900088866 /* ImageTableCell.m */,
 			);
 			path = edu;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 		559B265716FF018000088866 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				559B267B16FFF50300088866 /* ic_wh_message.png */,
 				559B267216FFDCDF00088866 /* modo.jpg */,
 				559B267316FFDCDF00088866 /* tc.png */,
 				559B267416FFDCDF00088866 /* tcbj.png */,
@@ -222,6 +230,7 @@
 				559B267516FFDCDF00088866 /* modo.jpg in Resources */,
 				559B267616FFDCDF00088866 /* tc.png in Resources */,
 				559B267716FFDCDF00088866 /* tcbj.png in Resources */,
+				559B267C16FFF50300088866 /* ic_wh_message.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +246,7 @@
 				559B266816FF121000088866 /* EduViewController.m in Sources */,
 				559B266E16FF12C800088866 /* MainViewController.m in Sources */,
 				559B267116FF459000088866 /* ImageViewController.m in Sources */,
+				559B267A16FFE56900088866 /* ImageTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +297,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -311,7 +321,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -324,6 +334,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "edu/edu-Prefix.pch";
 				INFOPLIST_FILE = "edu/edu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -335,6 +346,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "edu/edu-Prefix.pch";
 				INFOPLIST_FILE = "edu/edu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
