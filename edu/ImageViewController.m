@@ -61,7 +61,7 @@
     if (imageArray.count>indexPath.row*2+1) {
         cell.imageOtherView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row*2+1]];
         cell.clipsToBounds = NO;
-        
+        cell.imageOtherView.tag = indexPath.row*2+1;
 
         cell.imageOtherView.userInteractionEnabled = YES;
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testclick:)];
@@ -69,7 +69,8 @@
     }
     
    int choose_l_or_r=[[NSNumber numberWithInteger:cell.imageView.tag ] intValue];
-
+   NSLog(@"tag test: %d", choose_l_or_r );
+    cell.imageView.tag=indexPath.row*2;
     cell.imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testclick:)];
     [cell.imageView addGestureRecognizer:singleTap];
@@ -118,17 +119,20 @@
 {
     return nil;
 }
-- (IBAction)testclick:(id)sender
+- (IBAction)testclick:(UITapGestureRecognizer *)sender
 {
 //    动态获取IMageView的数据，每个响应的数据不一样
 //  EduAppDelegate *appDelegate = (EduAppDelegate *) [[UIApplication sharedApplication] delegate];
 //
 ////  [[self navigationController] pushViewController:targetController animated:YES];
-  [self performSegueWithIdentifier:@"showAlbumImage" sender:self];
+    NSLog(@"didSelectView: %@", [sender view] );
+  [self performSegueWithIdentifier:@"showAlbumImage" sender:[sender view]];
   
 }
--(void)prepareForSegue:(UIStoryboardSegue*) segue sender:(id)sender
+-(void)prepareForSegue:(UIStoryboardSegue*) segue sender:(UIImageView *)sender
 {
+//    UIImageView *imageView=(UIImageView *)sender;
+    NSLog(@"didSelectView: %d", sender.tag );
     if([[segue identifier] isEqualToString:@"showAlbumImage"]){
          AlbumImageViewController *detailsVC = [segue destinationViewController];
     }

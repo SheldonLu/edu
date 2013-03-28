@@ -106,12 +106,14 @@
         detailsVC.hidesBottomBarWhenPushed = YES;
     }
 }
-///////////////////////// 第三方响应  ///////////////////////////
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -第三方响应
+
 // 选取图片
 - (IBAction)getExistintPicture:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:
