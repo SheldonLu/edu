@@ -125,8 +125,14 @@
 //  EduAppDelegate *appDelegate = (EduAppDelegate *) [[UIApplication sharedApplication] delegate];
 //
 ////  [[self navigationController] pushViewController:targetController animated:YES];
-    NSLog(@"didSelectView: %@", [sender view] );
-  [self performSegueWithIdentifier:@"showAlbumImage" sender:[sender view]];
+    NSLog(@"aaaaa: %d", [sender view].tag );
+    NSLog(@"bbbb: %d", imageArray.count );
+    if ([sender view].tag+1 == imageArray.count) {
+        [self performSegueWithIdentifier:@"createAlbum" sender:[sender view]];
+    }else{
+        [self performSegueWithIdentifier:@"showAlbumImage" sender:[sender view]];
+    }
+    
   
 }
 -(void)prepareForSegue:(UIStoryboardSegue*) segue sender:(UIImageView *)sender
