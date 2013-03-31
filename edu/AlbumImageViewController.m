@@ -33,7 +33,9 @@
     loadingLabel.text = @"Loading...";
     loadingLabel.textAlignment = UITextAlignmentCenter;
     self.collectionView.loadingView = loadingLabel;
-    
+    self.collectionView.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor clearColor];
+    self.collectionView.loadingView.backgroundColor = [UIColor clearColor];
     [self loadDataSource];
 }
 - (void)loadDataSource {

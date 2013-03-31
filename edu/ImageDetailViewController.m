@@ -29,6 +29,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://i.imgur.com/%@%@", [itemDirtionary objectForKey:@"hash"], [itemDirtionary objectForKey:@"ext"]]];
+    self.view.backgroundColor = [UIColor clearColor];
     [self.imageView setImageWithURL:URL];
 }
 

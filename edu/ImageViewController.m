@@ -27,7 +27,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_02.png"]];
+//    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_02.png"]];
+//    [self.tableView.backgroundView setAlpha: 0.0f];
+    self.tableView.backgroundColor = [UIColor clearColor];
 //    self.view.superview.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_02.png"]];
 //    UIImage *bg = [UIImage imageNamed:@"jz_02.png"];
 //    UIImageView *imageBg= [[UIImageView alloc]initWithImage:bg];
@@ -36,8 +38,15 @@
 //    //[imageController startAnimating];
 //    self.backgroundPicture = imageBg;    //backgroundPicture 是uiimageView,在前面头文件声明了的。
 //    [self.view insertSubview:self.backgroundPicture atIndex:0];//全人类都知道这句话什么意思
+//    UIImage *image = [UIImage imageNamed:@"jz_02.png"];
+//    self.tableView.backgroundColor = [UIColor colorWithPatternImage:image];
     
     
+//    UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 960)];
+//    backgroundView.backgroundColor =[UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_02.png"]];
+//    [self.tableView addSubview:backgroundView];
+//    [self.tableView sendSubviewToBack:backgroundView];
+   
     imageArray = [[NSArray alloc] initWithObjects:@"modo.jpg",@"tc.png",@"tcbj.png",@"new.png",nil];
     titleArray = [[NSArray alloc] initWithObjects:@"个人相册",@"班级相册", nil];
 }
@@ -56,25 +65,26 @@
     if (cell ==nil){
         cell = [[ImageTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
-
+    
     cell.imageView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row*2]];
     if (imageArray.count>indexPath.row*2+1) {
         cell.imageOtherView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row*2+1]];
         cell.clipsToBounds = NO;
         cell.imageOtherView.tag = indexPath.row*2+1;
-
+        
         cell.imageOtherView.userInteractionEnabled = YES;
         UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testclick:)];
         [cell.imageOtherView addGestureRecognizer:singleTap];
     }
     
-   int choose_l_or_r=[[NSNumber numberWithInteger:cell.imageView.tag ] intValue];
-   NSLog(@"tag test: %d", choose_l_or_r );
+    int choose_l_or_r=[[NSNumber numberWithInteger:cell.imageView.tag ] intValue];
+    NSLog(@"tag test: %d", choose_l_or_r );
     cell.imageView.tag=indexPath.row*2;
     cell.imageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testclick:)];
     [cell.imageView addGestureRecognizer:singleTap];
-    
+//    cell.backgroundColor = [UIColor clearColor];
+//    [cell.backgroundView setAlpha:0.0f];
  
     
     return cell;

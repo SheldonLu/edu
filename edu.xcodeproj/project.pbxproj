@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		555D75451705E2FF00AA344A /* NoticeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555D75441705E2FF00AA344A /* NoticeListViewController.m */; };
 		559B263516FEFE7E00088866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559B263416FEFE7E00088866 /* UIKit.framework */; };
 		559B263716FEFE7E00088866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559B263616FEFE7E00088866 /* Foundation.framework */; };
 		559B263916FEFE7E00088866 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559B263816FEFE7E00088866 /* CoreGraphics.framework */; };
@@ -49,6 +50,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		555D75431705E2FF00AA344A /* NoticeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeListViewController.h; sourceTree = "<group>"; };
+		555D75441705E2FF00AA344A /* NoticeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeListViewController.m; sourceTree = "<group>"; };
 		559B263116FEFE7E00088866 /* edu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		559B263416FEFE7E00088866 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		559B263616FEFE7E00088866 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -182,6 +185,8 @@
 				55A16DE7170087F200904DE6 /* ImageDetailViewController.m */,
 				55DE21D917049B4600EA6AFC /* CreateAlbumViewController.h */,
 				55DE21DA17049B4600EA6AFC /* CreateAlbumViewController.m */,
+				555D75431705E2FF00AA344A /* NoticeListViewController.h */,
+				555D75441705E2FF00AA344A /* NoticeListViewController.m */,
 			);
 			path = edu;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				55A16DE517006F0400904DE6 /* PinterestCell.m in Sources */,
 				55A16DE8170087F200904DE6 /* ImageDetailViewController.m in Sources */,
 				55DE21DB17049B4600EA6AFC /* CreateAlbumViewController.m in Sources */,
+				555D75451705E2FF00AA344A /* NoticeListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
