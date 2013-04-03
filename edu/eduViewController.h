@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface EduViewController : UIViewController
-@property(nonatomic,weak) IBOutlet UIView *loginView;
+@property(nonatomic,strong) IBOutlet UIView *loginView;
+@property(nonatomic,strong) IBOutlet UITextField *loginNameView;
+@property(nonatomic,strong) IBOutlet UITextField *loginPwdView;
 - (IBAction)click:(id)sender;
+- (IBAction)textFiledNextEditing:(id)sender;
+- (IBAction)textFiledReturnEditing:(id)sender;
+- (IBAction)backgroundTap:(id)sender;
+
 @end

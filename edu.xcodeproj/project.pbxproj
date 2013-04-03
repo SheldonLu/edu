@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552B8C2217085D73008C3E51 /* NoticeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B8C2117085D73008C3E51 /* NoticeDetailViewController.m */; };
+		552B8C2517086B20008C3E51 /* VerticallyAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B8C2417086B20008C3E51 /* VerticallyAlignedLabel.m */; };
 		555D75451705E2FF00AA344A /* NoticeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555D75441705E2FF00AA344A /* NoticeListViewController.m */; };
 		559B263516FEFE7E00088866 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559B263416FEFE7E00088866 /* UIKit.framework */; };
 		559B263716FEFE7E00088866 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 559B263616FEFE7E00088866 /* Foundation.framework */; };
@@ -50,6 +52,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		552B8C2017085D73008C3E51 /* NoticeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeDetailViewController.h; sourceTree = "<group>"; };
+		552B8C2117085D73008C3E51 /* NoticeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeDetailViewController.m; sourceTree = "<group>"; };
+		552B8C2317086B20008C3E51 /* VerticallyAlignedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticallyAlignedLabel.h; sourceTree = "<group>"; };
+		552B8C2417086B20008C3E51 /* VerticallyAlignedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticallyAlignedLabel.m; sourceTree = "<group>"; };
 		555D75431705E2FF00AA344A /* NoticeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeListViewController.h; sourceTree = "<group>"; };
 		555D75441705E2FF00AA344A /* NoticeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeListViewController.m; sourceTree = "<group>"; };
 		559B263116FEFE7E00088866 /* edu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = edu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552B8C2617086C3D008C3E51 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				552B8C2317086B20008C3E51 /* VerticallyAlignedLabel.h */,
+				552B8C2417086B20008C3E51 /* VerticallyAlignedLabel.m */,
+			);
+			name = UILabel;
+			sourceTree = "<group>";
+		};
 		559B262816FEFE7E00088866 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +177,7 @@
 		559B263A16FEFE7E00088866 /* edu */ = {
 			isa = PBXGroup;
 			children = (
+				552B8C2617086C3D008C3E51 /* UILabel */,
 				55A16DC917006E2B00904DE6 /* SDWebImageSource */,
 				55BE07DE1700401500DB9C1F /* collectionflow */,
 				559B265716FF018000088866 /* images */,
@@ -187,6 +203,8 @@
 				55DE21DA17049B4600EA6AFC /* CreateAlbumViewController.m */,
 				555D75431705E2FF00AA344A /* NoticeListViewController.h */,
 				555D75441705E2FF00AA344A /* NoticeListViewController.m */,
+				552B8C2017085D73008C3E51 /* NoticeDetailViewController.h */,
+				552B8C2117085D73008C3E51 /* NoticeDetailViewController.m */,
 			);
 			path = edu;
 			sourceTree = "<group>";
@@ -359,6 +377,8 @@
 				55A16DE8170087F200904DE6 /* ImageDetailViewController.m in Sources */,
 				55DE21DB17049B4600EA6AFC /* CreateAlbumViewController.m in Sources */,
 				555D75451705E2FF00AA344A /* NoticeListViewController.m in Sources */,
+				552B8C2217085D73008C3E51 /* NoticeDetailViewController.m in Sources */,
+				552B8C2517086B20008C3E51 /* VerticallyAlignedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,4 +39,15 @@
     mv.modalPresentationStyle=UIModalPresentationFormSheet;
     [self presentViewController:mv animated:YES completion:nil];
 }
+#pragma mark -键盘事件
+-(IBAction)textFiledNextEditing:(id)sender {
+    [sender becomeFirstResponder];
+}
+-(IBAction)textFiledReturnEditing:(id)sender {
+    [sender resignFirstResponder];
+}
+- (IBAction)backgroundTap:(id)sender {
+    [self.loginNameView resignFirstResponder];
+    [self.loginPwdView resignFirstResponder];
+}
 @end

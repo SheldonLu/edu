@@ -7,7 +7,7 @@
 //
 
 #import "NoticeListViewController.h"
-
+#import "NoticeDetailViewController.h"
 @interface NoticeListViewController ()
 
 @end
@@ -51,4 +51,17 @@
 {
     return 1;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+      [self performSegueWithIdentifier:@"NoticeDetail" sender:self];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue*) segue sender:(id)sender
+{
+    
+    if([[segue identifier] isEqualToString:@"NoticeDetail"]){
+//        NoticeDetailViewController *detailsVC = [segue destinationViewController];
+    }
+}
+
 @end
