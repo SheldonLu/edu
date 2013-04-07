@@ -22,7 +22,6 @@
 		559B264E16FEFE7E00088866 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559B264C16FEFE7E00088866 /* MainStoryboard.storyboard */; };
 		559B265916FF019900088866 /* jz_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B265816FF019900088866 /* jz_02.png */; };
 		559B265B16FF022D00088866 /* jz_13.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B265A16FF022D00088866 /* jz_13.png */; };
-		559B265D16FF04A800088866 /* btn_check_off_disabled_holo_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B265C16FF04A800088866 /* btn_check_off_disabled_holo_light.png */; };
 		559B265F16FF055B00088866 /* jz_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B265E16FF055B00088866 /* jz_10.png */; };
 		559B266116FF061200088866 /* checkb_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B266016FF061200088866 /* checkb_bg.png */; };
 		559B266416FF068500088866 /* icon_logr.png in Resources */ = {isa = PBXBuildFile; fileRef = 559B266216FF068500088866 /* icon_logr.png */; };
@@ -46,6 +45,8 @@
 		55A16DE8170087F200904DE6 /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A16DE7170087F200904DE6 /* ImageDetailViewController.m */; };
 		55BC7C4C17113F81004A513B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC7C4817113F81004A513B /* TPKeyboardAvoidingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55BC7C4D17113F81004A513B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC7C4B17113F81004A513B /* TPKeyboardAvoidingTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55BC7C4F1711614F004A513B /* btn_check_on_disabled_holo_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC7C4E1711614F004A513B /* btn_check_on_disabled_holo_light.png */; };
+		55BC7C5117116179004A513B /* btn_check_off_disabled_holo_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BC7C5017116179004A513B /* btn_check_off_disabled_holo_light.png */; };
 		55BE07D417001B3000DB9C1F /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BE07D317001B3000DB9C1F /* new.png */; };
 		55BE07D71700318800DB9C1F /* AlbumImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE07D61700318800DB9C1F /* AlbumImageViewController.m */; };
 		55BE07EA1700435500DB9C1F /* PSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE07E81700435500DB9C1F /* PSCollectionView.m */; };
@@ -76,7 +77,6 @@
 		559B264D16FEFE7E00088866 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		559B265816FF019900088866 /* jz_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jz_02.png; sourceTree = "<group>"; };
 		559B265A16FF022D00088866 /* jz_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jz_13.png; sourceTree = "<group>"; };
-		559B265C16FF04A800088866 /* btn_check_off_disabled_holo_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_check_off_disabled_holo_light.png; sourceTree = "<group>"; };
 		559B265E16FF055B00088866 /* jz_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jz_10.png; sourceTree = "<group>"; };
 		559B266016FF061200088866 /* checkb_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkb_bg.png; sourceTree = "<group>"; };
 		559B266216FF068500088866 /* icon_logr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_logr.png; sourceTree = "<group>"; };
@@ -119,6 +119,8 @@
 		55BC7C4917113F81004A513B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
 		55BC7C4A17113F81004A513B /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
 		55BC7C4B17113F81004A513B /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		55BC7C4E1711614F004A513B /* btn_check_on_disabled_holo_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_check_on_disabled_holo_light.png; sourceTree = "<group>"; };
+		55BC7C5017116179004A513B /* btn_check_off_disabled_holo_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_check_off_disabled_holo_light.png; sourceTree = "<group>"; };
 		55BE07D317001B3000DB9C1F /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 		55BE07D51700318800DB9C1F /* AlbumImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumImageViewController.h; sourceTree = "<group>"; };
 		55BE07D61700318800DB9C1F /* AlbumImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumImageViewController.m; sourceTree = "<group>"; };
@@ -233,6 +235,8 @@
 		559B265716FF018000088866 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				55BC7C5017116179004A513B /* btn_check_off_disabled_holo_light.png */,
+				55BC7C4E1711614F004A513B /* btn_check_on_disabled_holo_light.png */,
 				55BE07D317001B3000DB9C1F /* new.png */,
 				559B267B16FFF50300088866 /* ic_wh_message.png */,
 				559B267216FFDCDF00088866 /* modo.jpg */,
@@ -242,7 +246,6 @@
 				559B266316FF068500088866 /* icon_logs.png */,
 				559B266016FF061200088866 /* checkb_bg.png */,
 				559B265E16FF055B00088866 /* jz_10.png */,
-				559B265C16FF04A800088866 /* btn_check_off_disabled_holo_light.png */,
 				559B265A16FF022D00088866 /* jz_13.png */,
 				559B265816FF019900088866 /* jz_02.png */,
 			);
@@ -355,7 +358,6 @@
 				559B264E16FEFE7E00088866 /* MainStoryboard.storyboard in Resources */,
 				559B265916FF019900088866 /* jz_02.png in Resources */,
 				559B265B16FF022D00088866 /* jz_13.png in Resources */,
-				559B265D16FF04A800088866 /* btn_check_off_disabled_holo_light.png in Resources */,
 				559B265F16FF055B00088866 /* jz_10.png in Resources */,
 				559B266116FF061200088866 /* checkb_bg.png in Resources */,
 				559B266416FF068500088866 /* icon_logr.png in Resources */,
@@ -365,6 +367,8 @@
 				559B267716FFDCDF00088866 /* tcbj.png in Resources */,
 				559B267C16FFF50300088866 /* ic_wh_message.png in Resources */,
 				55BE07D417001B3000DB9C1F /* new.png in Resources */,
+				55BC7C4F1711614F004A513B /* btn_check_on_disabled_holo_light.png in Resources */,
+				55BC7C5117116179004A513B /* btn_check_off_disabled_holo_light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

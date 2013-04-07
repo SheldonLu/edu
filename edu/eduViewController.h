@@ -14,12 +14,20 @@
 #define MainWidth ScreenWidth
 @class TPKeyboardAvoidingScrollView;
 
-@interface EduViewController : UIViewController <UITextFieldDelegate>
+@interface EduViewController : UIViewController <UITextFieldDelegate>{
+    Boolean isLogin;
+    Boolean isRemember;
+}
 @property (nonatomic, strong) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
 //@property(nonatomic,strong) IBOutlet UIView *loginView;
 @property(nonatomic,strong) IBOutlet UITextField *loginNameView;
 @property(nonatomic,strong) IBOutlet UITextField *loginPwdView;
 @property(nonatomic,strong) IBOutlet UIButton *loginButton;
+@property(nonatomic,strong) IBOutlet UIButton *autoLogin;
+@property(nonatomic,strong) IBOutlet UIButton *rememberPwd;
+
+- (IBAction)rememberclick:(id)sender;
+- (IBAction)autoLoginclick:(id)sender;
 - (IBAction)click:(id)sender;
 - (IBAction)textFiledNextEditing:(id)sender;
 - (IBAction)textFiledReturnEditing:(id)sender;

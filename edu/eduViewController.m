@@ -21,6 +21,8 @@
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_02.png"]];
    // loginView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_10.png"]];
+    isRemember = false;
+    isLogin = false;
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,6 +30,30 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+#pragma mark -记住密码和自动登陆事件
+- (IBAction)rememberclick:(id)sender
+{
+//    self.rememberPwd.backgroundColor  = [UIColor clearColor];
+    if(isRemember){
+        [self.rememberPwd setBackgroundImage:[UIImage imageNamed:@"btn_check_off_disabled_holo_light.png"] forState:UIControlStateNormal];
+        isRemember=false;
+    }else{
+        [self.rememberPwd setBackgroundImage:[UIImage imageNamed:@"btn_check_on_disabled_holo_light.png"] forState:UIControlStateNormal];
+        isRemember=true;
+    }
+
+}
+- (IBAction)autoLoginclick:(id)sender
+{
+    if(isLogin){
+        [self.autoLogin setBackgroundImage:[UIImage imageNamed:@"btn_check_off_disabled_holo_light.png"] forState:UIControlStateNormal];
+        isLogin=false;
+    }else{
+        [self.autoLogin setBackgroundImage:[UIImage imageNamed:@"btn_check_on_disabled_holo_light.png"] forState:UIControlStateNormal];
+        isLogin=true;
+    }
+}
+#pragma mark -跳转事件
 - (IBAction)click:(id)sender
 {
 //    MainViewController*  mainViewC =  [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
@@ -49,6 +75,7 @@
     [self.loginNameView resignFirstResponder];
     [self.loginPwdView resignFirstResponder];
 }
+
 
 
 @end

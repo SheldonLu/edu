@@ -153,7 +153,7 @@
         }
     }
 //    自己添加，修改弹动太厉害问题，理解后动态计算TODO
-//    offset = offset-100;
+    offset = offset-40;
     if (offset < 0) offset = 0;
     
     return offset;
