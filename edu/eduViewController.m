@@ -9,6 +9,8 @@
 #import "EduViewController.h"
 #import "MainViewController.h"
 #import "EduAppDelegate.h"
+#import "SVProgressHUD.h"
+#import "EduHTTPClient.h"
 @interface EduViewController ()
 
 @end
@@ -21,6 +23,8 @@
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_02.png"]];
    // loginView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_10.png"]];
+    [self.loginNameView setText:@"wll"];
+    [self.loginPwdView setText:@"sRYVHy>m6Tgx"];
     isRemember = false;
     isLogin = false;
 }
@@ -29,6 +33,42 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)loginWithName:(NSString *)name password:(NSString *)password
+{
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
+    if (name.length==0) {
+        [SVProgressHUD dismissWithError:@"用户名不能为空" afterDelay:1];
+        return ;
+    }
+    if(password.length==0){
+        [SVProgressHUD dismissWithError:@"密码不能为空" afterDelay:1];
+    }
+    NSDictionary *loginFormDataDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       name, @"uname",
+                                       password, @"pass",
+                                       nil];
+    [[EduHTTPClient sharedClient] performRequestWithPath:LOGIN formDataDic:loginFormDataDict withSuccessBlock:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"%@",JSON);
+        int errorCode = [[JSON objectForKey:@"ErrorCode"] intValue];
+        if (errorCode == 0) {
+            [SVProgressHUD dismissWithSuccess:@"登入成功" afterDelay:1];
+            UIStoryboard *mainStoryBoard=[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+            MainViewController *mv=[mainStoryBoard instantiateViewControllerWithIdentifier:@"MainViewController"];
+            mv.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
+            mv.modalPresentationStyle=UIModalPresentationFormSheet;
+            [self presentViewController:mv animated:YES completion:nil];
+        }else{
+            NSString *errorInfo =  [JSON objectForKey:@"ErrorInfo"];
+            [SVProgressHUD dismissWithError:errorInfo afterDelay:1];
+        }
+       
+    } failureBlock:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"%@",error);
+//        [SVProgressHUD dismissWithError:@"系统内部错误，请联系管理员" afterDelay:1];
+        [SVProgressHUD dismiss];
+    }];
 }
 #pragma mark -记住密码和自动登陆事件
 - (IBAction)rememberclick:(id)sender
@@ -58,11 +98,8 @@
 {
 //    MainViewController*  mainViewC =  [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
 //    [self presentModalViewController:mainViewC animated:YES];
-    UIStoryboard *mainStoryBoard=[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    MainViewController *mv=[mainStoryBoard instantiateViewControllerWithIdentifier:@"MainViewController"];
-    mv.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;
-    mv.modalPresentationStyle=UIModalPresentationFormSheet;
-    [self presentViewController:mv animated:YES completion:nil];
+
+    [self loginWithName:self.loginNameView.text password:self.loginPwdView.text];
 }
 #pragma mark -键盘事件
 -(IBAction)textFiledNextEditing:(id)sender {
