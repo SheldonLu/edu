@@ -11,4 +11,5 @@
 @interface ImageDetailViewController : UIViewController
 @property(nonatomic,strong) IBOutlet UIImageView *imageView;
 @property(nonatomic,strong) NSDictionary *itemDirtionary;
+@property(nonatomic,strong) IBOutlet UIView *containView;
 @end

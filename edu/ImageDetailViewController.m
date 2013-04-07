@@ -28,9 +28,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    CGRect r = [ UIScreen mainScreen ].applicationFrame;
+    CGSize size = r.size;
+    CGFloat width = size.width;
+    CGFloat height =size.height-20;
+    
+
+    
+    self.imageView.frame=CGRectMake(0 ,0, width,height);
+    
     NSURL *URL = [NSURL URLWithString:[NSString stringWithFormat:@"http://i.imgur.com/%@%@", [itemDirtionary objectForKey:@"hash"], [itemDirtionary objectForKey:@"ext"]]];
     self.view.backgroundColor = [UIColor clearColor];
     [self.imageView setImageWithURL:URL];
+    
+
+    self.imageView.frame=CGRectMake(0 ,height, width,20);
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -44,6 +44,8 @@
 		55A16DE217006EB400904DE6 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A16DDB17006EB400904DE6 /* UIImageView+WebCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55A16DE517006F0400904DE6 /* PinterestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A16DE417006F0300904DE6 /* PinterestCell.m */; };
 		55A16DE8170087F200904DE6 /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55A16DE7170087F200904DE6 /* ImageDetailViewController.m */; };
+		55BC7C4C17113F81004A513B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC7C4817113F81004A513B /* TPKeyboardAvoidingScrollView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55BC7C4D17113F81004A513B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BC7C4B17113F81004A513B /* TPKeyboardAvoidingTableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		55BE07D417001B3000DB9C1F /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = 55BE07D317001B3000DB9C1F /* new.png */; };
 		55BE07D71700318800DB9C1F /* AlbumImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE07D61700318800DB9C1F /* AlbumImageViewController.m */; };
 		55BE07EA1700435500DB9C1F /* PSCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BE07E81700435500DB9C1F /* PSCollectionView.m */; };
@@ -113,6 +115,10 @@
 		55A16DE417006F0300904DE6 /* PinterestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinterestCell.m; sourceTree = "<group>"; };
 		55A16DE6170087F100904DE6 /* ImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
 		55A16DE7170087F200904DE6 /* ImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
+		55BC7C4817113F81004A513B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		55BC7C4917113F81004A513B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		55BC7C4A17113F81004A513B /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		55BC7C4B17113F81004A513B /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
 		55BE07D317001B3000DB9C1F /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 		55BE07D51700318800DB9C1F /* AlbumImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumImageViewController.h; sourceTree = "<group>"; };
 		55BE07D61700318800DB9C1F /* AlbumImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumImageViewController.m; sourceTree = "<group>"; };
@@ -177,6 +183,7 @@
 		559B263A16FEFE7E00088866 /* edu */ = {
 			isa = PBXGroup;
 			children = (
+				55BC7C4717113F46004A513B /* tpkeyboardavoiding */,
 				552B8C2617086C3D008C3E51 /* UILabel */,
 				55A16DC917006E2B00904DE6 /* SDWebImageSource */,
 				55BE07DE1700401500DB9C1F /* collectionflow */,
@@ -265,6 +272,17 @@
 				55A16DDB17006EB400904DE6 /* UIImageView+WebCache.m */,
 			);
 			name = SDWebImageSource;
+			sourceTree = "<group>";
+		};
+		55BC7C4717113F46004A513B /* tpkeyboardavoiding */ = {
+			isa = PBXGroup;
+			children = (
+				55BC7C4817113F81004A513B /* TPKeyboardAvoidingScrollView.m */,
+				55BC7C4917113F81004A513B /* TPKeyboardAvoidingScrollView.h */,
+				55BC7C4A17113F81004A513B /* TPKeyboardAvoidingTableView.h */,
+				55BC7C4B17113F81004A513B /* TPKeyboardAvoidingTableView.m */,
+			);
+			name = tpkeyboardavoiding;
 			sourceTree = "<group>";
 		};
 		55BE07DE1700401500DB9C1F /* collectionflow */ = {
@@ -379,6 +397,8 @@
 				555D75451705E2FF00AA344A /* NoticeListViewController.m in Sources */,
 				552B8C2217085D73008C3E51 /* NoticeDetailViewController.m in Sources */,
 				552B8C2517086B20008C3E51 /* VerticallyAlignedLabel.m in Sources */,
+				55BC7C4C17113F81004A513B /* TPKeyboardAvoidingScrollView.m in Sources */,
+				55BC7C4D17113F81004A513B /* TPKeyboardAvoidingTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,11 +483,18 @@
 		559B265516FEFE7E00088866 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: XIE PENG (ZPY9Z8SEL6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: XIE PENG (ZPY9Z8SEL6)";
+				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "edu/edu-Prefix.pch";
 				INFOPLIST_FILE = "edu/edu-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2E2DFE4E-AF78-42B7-9DBF-5D097798FF78";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2E2DFE4E-AF78-42B7-9DBF-5D097798FF78";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -475,11 +502,18 @@
 		559B265616FEFE7E00088866 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: XIE PENG (ZPY9Z8SEL6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: XIE PENG (ZPY9Z8SEL6)";
+				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "edu/edu-Prefix.pch";
 				INFOPLIST_FILE = "edu/edu-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2E2DFE4E-AF78-42B7-9DBF-5D097798FF78";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2E2DFE4E-AF78-42B7-9DBF-5D097798FF78";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

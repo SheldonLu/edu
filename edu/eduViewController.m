@@ -14,14 +14,13 @@
 @end
 
 @implementation EduViewController
-@synthesize loginView;
+//@synthesize loginView;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_02.png"]];
-    loginView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_10.png"]];
-    
+   // loginView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"jz_10.png"]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,7 +40,7 @@
 }
 #pragma mark -键盘事件
 -(IBAction)textFiledNextEditing:(id)sender {
-    [sender becomeFirstResponder];
+    [self.loginPwdView becomeFirstResponder];
 }
 -(IBAction)textFiledReturnEditing:(id)sender {
     [sender resignFirstResponder];
@@ -50,4 +49,6 @@
     [self.loginNameView resignFirstResponder];
     [self.loginPwdView resignFirstResponder];
 }
+
+
 @end

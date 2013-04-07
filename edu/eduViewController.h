@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#define ScreenHeight [[UIScreen mainScreen] bounds].size.height
+#define ScreenWidth [[UIScreen mainScreen] bounds].size.width
+#define StateBarHeight 20
+#define MainHeight (ScreenHeight - StateBarHeight)
+#define MainWidth ScreenWidth
+@class TPKeyboardAvoidingScrollView;
 
-@interface EduViewController : UIViewController
-@property(nonatomic,strong) IBOutlet UIView *loginView;
+@interface EduViewController : UIViewController <UITextFieldDelegate>
+@property (nonatomic, strong) IBOutlet TPKeyboardAvoidingScrollView *scrollView;
+//@property(nonatomic,strong) IBOutlet UIView *loginView;
 @property(nonatomic,strong) IBOutlet UITextField *loginNameView;
 @property(nonatomic,strong) IBOutlet UITextField *loginPwdView;
+@property(nonatomic,strong) IBOutlet UIButton *loginButton;
 - (IBAction)click:(id)sender;
 - (IBAction)textFiledNextEditing:(id)sender;
 - (IBAction)textFiledReturnEditing:(id)sender;
