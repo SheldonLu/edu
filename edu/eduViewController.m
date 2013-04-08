@@ -35,6 +35,9 @@
         [self.loginNameView setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"loginName"]];
         [self.loginPwdView setText:[[NSUserDefaults standardUserDefaults] stringForKey:@"loginPwd"]];
     }
+    if (isLogin) {
+        [self.autoLogin setBackgroundImage:[UIImage imageNamed:@"btn_check_on_disabled_holo_light.png"] forState:UIControlStateNormal];
+    }
 }
 
 - (void)didReceiveMemoryWarning

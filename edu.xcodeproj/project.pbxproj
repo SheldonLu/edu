@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		55129D0A1711A30B000FC002 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 55129D071711A30B000FC002 /* SVProgressHUD.bundle */; };
 		55129D0B1711A30B000FC002 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 55129D091711A30B000FC002 /* SVProgressHUD.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55129D0F171260B8000FC002 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55129D0E171260B8000FC002 /* QuartzCore.framework */; };
+		55129D1717126226000FC002 /* IISideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55129D1217126226000FC002 /* IISideController.m */; };
+		55129D1817126226000FC002 /* IIViewDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55129D1417126226000FC002 /* IIViewDeckController.m */; };
+		55129D1917126226000FC002 /* IIWrapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55129D1617126226000FC002 /* IIWrapController.m */; };
 		552B8C2217085D73008C3E51 /* NoticeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B8C2117085D73008C3E51 /* NoticeDetailViewController.m */; };
 		552B8C2517086B20008C3E51 /* VerticallyAlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 552B8C2417086B20008C3E51 /* VerticallyAlignedLabel.m */; };
 		555D75451705E2FF00AA344A /* NoticeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 555D75441705E2FF00AA344A /* NoticeListViewController.m */; };
@@ -71,6 +75,13 @@
 		55129D071711A30B000FC002 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		55129D081711A30B000FC002 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		55129D091711A30B000FC002 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		55129D0E171260B8000FC002 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		55129D1117126226000FC002 /* IISideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IISideController.h; path = ../../ViewDeck/ViewDeck/IISideController.h; sourceTree = "<group>"; };
+		55129D1217126226000FC002 /* IISideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IISideController.m; path = ../../ViewDeck/ViewDeck/IISideController.m; sourceTree = "<group>"; };
+		55129D1317126226000FC002 /* IIViewDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IIViewDeckController.h; path = ../../ViewDeck/ViewDeck/IIViewDeckController.h; sourceTree = "<group>"; };
+		55129D1417126226000FC002 /* IIViewDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IIViewDeckController.m; path = ../../ViewDeck/ViewDeck/IIViewDeckController.m; sourceTree = "<group>"; };
+		55129D1517126226000FC002 /* IIWrapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IIWrapController.h; path = ../../ViewDeck/ViewDeck/IIWrapController.h; sourceTree = "<group>"; };
+		55129D1617126226000FC002 /* IIWrapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IIWrapController.m; path = ../../ViewDeck/ViewDeck/IIWrapController.m; sourceTree = "<group>"; };
 		552B8C2017085D73008C3E51 /* NoticeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeDetailViewController.h; sourceTree = "<group>"; };
 		552B8C2117085D73008C3E51 /* NoticeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeDetailViewController.m; sourceTree = "<group>"; };
 		552B8C2317086B20008C3E51 /* VerticallyAlignedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticallyAlignedLabel.h; sourceTree = "<group>"; };
@@ -174,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55129D0F171260B8000FC002 /* QuartzCore.framework in Frameworks */,
 				559B263516FEFE7E00088866 /* UIKit.framework in Frameworks */,
 				559B263716FEFE7E00088866 /* Foundation.framework in Frameworks */,
 				559B263916FEFE7E00088866 /* CoreGraphics.framework in Frameworks */,
@@ -191,6 +203,74 @@
 				55129D091711A30B000FC002 /* SVProgressHUD.m */,
 			);
 			name = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		55129D0C17124E4B000FC002 /* old */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = old;
+			sourceTree = "<group>";
+		};
+		55129D0D17124E5A000FC002 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				55129D101712620A000FC002 /* ViewDeck */,
+				55BC7C5217116A34004A513B /* AFNetworking */,
+				552B8C2617086C3D008C3E51 /* UILabel */,
+				55BC7C4717113F46004A513B /* tpkeyboardavoiding */,
+				55129D0017119885000FC002 /* SVProgressHUD */,
+				55A16DC917006E2B00904DE6 /* SDWebImageSource */,
+				55BE07DE1700401500DB9C1F /* collectionflow */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		55129D101712620A000FC002 /* ViewDeck */ = {
+			isa = PBXGroup;
+			children = (
+				55129D1117126226000FC002 /* IISideController.h */,
+				55129D1217126226000FC002 /* IISideController.m */,
+				55129D1317126226000FC002 /* IIViewDeckController.h */,
+				55129D1417126226000FC002 /* IIViewDeckController.m */,
+				55129D1517126226000FC002 /* IIWrapController.h */,
+				55129D1617126226000FC002 /* IIWrapController.m */,
+			);
+			name = ViewDeck;
+			sourceTree = "<group>";
+		};
+		55129D1A17126267000FC002 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				559B266616FF121000088866 /* EduViewController.h */,
+				559B266716FF121000088866 /* EduViewController.m */,
+				559B266C16FF12C800088866 /* MainViewController.h */,
+				559B266D16FF12C800088866 /* MainViewController.m */,
+				552B8C2017085D73008C3E51 /* NoticeDetailViewController.h */,
+				552B8C2117085D73008C3E51 /* NoticeDetailViewController.m */,
+				555D75431705E2FF00AA344A /* NoticeListViewController.h */,
+				555D75441705E2FF00AA344A /* NoticeListViewController.m */,
+				559B266F16FF459000088866 /* ImageViewController.h */,
+				559B267016FF459000088866 /* ImageViewController.m */,
+				55A16DE6170087F100904DE6 /* ImageDetailViewController.h */,
+				55A16DE7170087F200904DE6 /* ImageDetailViewController.m */,
+				55DE21D917049B4600EA6AFC /* CreateAlbumViewController.h */,
+				55DE21DA17049B4600EA6AFC /* CreateAlbumViewController.m */,
+				55BE07D51700318800DB9C1F /* AlbumImageViewController.h */,
+				55BE07D61700318800DB9C1F /* AlbumImageViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		55129D1B171262A9000FC002 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				55A16DE317006F0300904DE6 /* PinterestCell.h */,
+				55A16DE417006F0300904DE6 /* PinterestCell.m */,
+				559B267816FFE56900088866 /* ImageTableCell.h */,
+				559B267916FFE56900088866 /* ImageTableCell.m */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		552B8C2617086C3D008C3E51 /* UILabel */ = {
@@ -222,7 +302,7 @@
 		559B263316FEFE7E00088866 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				55BC7C5217116A34004A513B /* AFNetworking */,
+				55129D0E171260B8000FC002 /* QuartzCore.framework */,
 				559B263416FEFE7E00088866 /* UIKit.framework */,
 				559B263616FEFE7E00088866 /* Foundation.framework */,
 				559B263816FEFE7E00088866 /* CoreGraphics.framework */,
@@ -233,39 +313,18 @@
 		559B263A16FEFE7E00088866 /* edu */ = {
 			isa = PBXGroup;
 			children = (
-				55BE07D51700318800DB9C1F /* AlbumImageViewController.h */,
-				55BE07D61700318800DB9C1F /* AlbumImageViewController.m */,
-				55BE07DE1700401500DB9C1F /* collectionflow */,
+				55129D1B171262A9000FC002 /* cell */,
+				55129D1A17126267000FC002 /* controller */,
 				55129D0617119939000FC002 /* Constant.h */,
-				55DE21D917049B4600EA6AFC /* CreateAlbumViewController.h */,
-				55DE21DA17049B4600EA6AFC /* CreateAlbumViewController.m */,
 				559B264316FEFE7E00088866 /* EduAppDelegate.h */,
 				559B264416FEFE7E00088866 /* EduAppDelegate.m */,
 				55BC7C6F17116AF8004A513B /* EduHTTPClient.h */,
 				55BC7C7017116AF8004A513B /* EduHTTPClient.m */,
-				559B266616FF121000088866 /* EduViewController.h */,
-				559B266716FF121000088866 /* EduViewController.m */,
-				55A16DE6170087F100904DE6 /* ImageDetailViewController.h */,
-				55A16DE7170087F200904DE6 /* ImageDetailViewController.m */,
 				559B265716FF018000088866 /* images */,
-				559B267816FFE56900088866 /* ImageTableCell.h */,
-				559B267916FFE56900088866 /* ImageTableCell.m */,
-				559B266F16FF459000088866 /* ImageViewController.h */,
-				559B267016FF459000088866 /* ImageViewController.m */,
 				559B264C16FEFE7E00088866 /* MainStoryboard.storyboard */,
-				559B266C16FF12C800088866 /* MainViewController.h */,
-				559B266D16FF12C800088866 /* MainViewController.m */,
-				552B8C2017085D73008C3E51 /* NoticeDetailViewController.h */,
-				552B8C2117085D73008C3E51 /* NoticeDetailViewController.m */,
-				555D75431705E2FF00AA344A /* NoticeListViewController.h */,
-				555D75441705E2FF00AA344A /* NoticeListViewController.m */,
-				55A16DE317006F0300904DE6 /* PinterestCell.h */,
-				55A16DE417006F0300904DE6 /* PinterestCell.m */,
-				55A16DC917006E2B00904DE6 /* SDWebImageSource */,
+				55129D0C17124E4B000FC002 /* old */,
 				559B263B16FEFE7E00088866 /* Supporting Files */,
-				55129D0017119885000FC002 /* SVProgressHUD */,
-				55BC7C4717113F46004A513B /* tpkeyboardavoiding */,
-				552B8C2617086C3D008C3E51 /* UILabel */,
+				55129D0D17124E5A000FC002 /* vendor */,
 			);
 			path = edu;
 			sourceTree = "<group>";
@@ -363,7 +422,8 @@
 				55BC7C6417116A34004A513B /* UIImageView+AFNetworking.h */,
 				55BC7C6517116A34004A513B /* UIImageView+AFNetworking.m */,
 			);
-			path = AFNetworking;
+			name = AFNetworking;
+			path = ../AFNetworking;
 			sourceTree = "<group>";
 		};
 		55BE07DE1700401500DB9C1F /* collectionflow */ = {
@@ -493,6 +553,9 @@
 				55BC7C6E17116A34004A513B /* UIImageView+AFNetworking.m in Sources */,
 				55BC7C7117116AF9004A513B /* EduHTTPClient.m in Sources */,
 				55129D0B1711A30B000FC002 /* SVProgressHUD.m in Sources */,
+				55129D1717126226000FC002 /* IISideController.m in Sources */,
+				55129D1817126226000FC002 /* IIViewDeckController.m in Sources */,
+				55129D1917126226000FC002 /* IIWrapController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
